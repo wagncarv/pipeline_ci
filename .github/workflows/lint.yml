@@ -24,4 +24,4 @@ jobs:
         if: steps.mix-cache-lint.outputs.cache-hit != 'true'
         run: mix deps.get
       - name: ===> Credo LINT
-        run: mix format --strict
+        run: mix credo --strict
